@@ -14,9 +14,5 @@ pkgs.libsForQt5.callPackage({mkDerivation}: mkDerivation) {} rec {
 
   nativeBuildInputs = with pkgs; [ qt5.qmake qt5.qttools qt5.wrapQtAppsHook ];
   buildInputs = with pkgs; [ qt5.qtbase ];
-
-	postUnpack = ''
-    export sourceRoot=$sourceRoot/src
-  '';
 }
 
